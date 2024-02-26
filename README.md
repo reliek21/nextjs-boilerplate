@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Name of project here
 
-## Getting Started
+![image banner](public/banner/image-banner.png)
 
-First, run the development server:
+_Name of project here_ is a project designed to provide a user-friendly interface for _name of the project here_.
 
+### Project structure:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── README.md                       # README file
+├── .github                         # GitHub folder
+├── .husky                          # Husky configuration
+├── .storybook                      # Storybook folder
+├── .vscode                         # VSCode configuration
+├── migrations                      # Database migrations
+├── public                          # Public assets folder
+├── scripts                         # Scripts folder
+├── src
+│   ├── app                         # Next JS App (App Router)
+│   ├── components                  # React components
+│   ├── libs                        # 3rd party libraries configuration
+│   ├── locales                     # Locales folder (i18n messages)
+│   ├── models                      # Database models
+│   ├── styles                      # Styles folder
+│   ├── templates                   # Templates folder
+│   ├── types                       # Type definitions
+│   ├── utils                       # Utilities folder
+│   └── validations                 # Validation schemas
+├── tests
+│   ├── e2e                         # E2E tests, also includes Monitoring as Code
+│   └── integration                 # Integration tests
+├── tailwind.config.js              # Tailwind CSS configuration
+└── tsconfig.json                   # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Customization:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Philosophy:
 
-## Learn More
+- Easy to customize
+- Minimal code
+- SEO-friendly
+- Production-ready
 
-To learn more about Next.js, take a look at the following resources:
+### Requirements:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`Node.js 18+ and npm`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tech Stack:
 
-## Deploy on Vercel
+- **Client**: TypeScript, React, Next.js
+- **Type-safe ORM**: DrizzleORM
+- **Authentication**: NextAuth.js with Supabase
+- **Database**: Supabase Database
+- **Styles**: TailwindCSS and Shacdn
+- **API**: Supabase API
+- **Email Service**: Resend
+- **Analytics**: Google Analytics, Google Search Console
+- **Multi-language (i18n)**:  next-intl
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Running the Project Locally:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To run this project on your local machine, follow these steps:
+
+1. Clone the project repository:
+
+```bash
+git clone https://project-link
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd my-project
+```
+
+3. Install the project dependencies:
+
+```bash
+npm install
+```
+
+```bash
+Start the development server:
+```
+
+### License:
+
+This project is licensed under the [MIT License](LICENSE.md). See the `LICENSE.md` file in the project repository for more details.
