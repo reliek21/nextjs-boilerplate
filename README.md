@@ -5,6 +5,7 @@
 _Name of project here_ is a project designed to provide a user-friendly interface for _name of the project here_.
 
 ### Project structure:
+
 ```bash
 .
 ├── README.md                       # README file
@@ -35,7 +36,6 @@ _Name of project here_ is a project designed to provide a user-friendly interfac
 
 ### Customization:
 
-
 ### Philosophy:
 
 - Easy to customize
@@ -57,7 +57,7 @@ _Name of project here_ is a project designed to provide a user-friendly interfac
 - **API**: Supabase API
 - **Email Service**: Resend
 - **Analytics**: Google Analytics, Google Search Console
-- **Multi-language (i18n)**:  next-intl
+- **Multi-language (i18n)**: next-intl
 
 ## Running the Project Locally:
 
