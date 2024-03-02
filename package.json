@@ -25,20 +25,27 @@
 		"lint:fix": "eslint . --fix",
 		"test": "jest",
 		"build:prod": "next lint && eslint . --fix && next build",
-		"clean": "rm -rm node_modules/ .next/"
+		"clean": "rm -rf node_modules/ .next/"
 	},
 	"dependencies": {
-		"next": "14.1.0",
+		"@radix-ui/react-icons": "^1.3.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"next": "14.1.1",
 		"react": "^18",
-		"react-dom": "^18"
+		"react-dom": "^18",
+		"resend": "^3.2.0",
+		"tailwind-merge": "^2.2.1",
+		"tailwindcss-animate": "^1.0.7",
+		"zod": "^3.22.4"
 	},
 	"devDependencies": {
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
-		"autoprefixer": "^10.0.1",
+		"autoprefixer": "^10.4.18",
 		"eslint": "^8",
-		"eslint-config-next": "^14.1.0",
+		"eslint-config-next": "^14.1.1",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-prettier": "^5.1.3",
@@ -47,7 +54,7 @@
 		"postcss": "^8",
 		"prettier": "^3.2.5",
 		"sass": "^1.71.1",
-		"tailwindcss": "^3.3.0",
+		"tailwindcss": "^3.4.1",
 		"typescript": "^5"
 	}
 }
