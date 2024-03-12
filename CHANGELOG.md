@@ -8,6 +8,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 
 ### Deps:
 
+- build(deps-dev): bump @types/react-dom from 18.2.19 to 18.2.21 | [#15](https://github.com/reliek21/nextjs-boilerplate/pull/15) | [reliek21](https://github.com/reliek21)
 - Principal configuration added | [#8](https://github.com/reliek21/nextjs-boilerplate/pull/8) | [reliek21](https://github.com/reliek21)
 
 ### Added:
