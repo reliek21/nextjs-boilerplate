@@ -8,6 +8,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 
 ### Deps:
 
+- build(deps): bump next from 14.1.1 to 14.1.3 | [#14](https://github.com/reliek21/nextjs-boilerplate/pull/14) | [reliek21](https://github.com/reliek21)
 - build(deps-dev): bump eslint-config-next from 14.1.1 to 14.1.3 | [#13](https://github.com/reliek21/nextjs-boilerplate/pull/13) | [reliek21](https://github.com/reliek21)
 - build(deps-dev): bump @types/react from 18.2.58 to 18.2.64 | [#12](https://github.com/reliek21/nextjs-boilerplate/pull/12) | [reliek21](https://github.com/reliek21)
 - Principal configuration added | [#8](https://github.com/reliek21/nextjs-boilerplate/pull/8) | [reliek21](https://github.com/reliek21)
