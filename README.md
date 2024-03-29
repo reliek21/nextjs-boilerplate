@@ -2,39 +2,7 @@
 
 ![image banner](public/banner/image-banner.png)
 
-_Name of project here_ is a project designed to provide a user-friendly interface for _name of the project here_.
-
-### Project structure:
-
-```bash
-.
-├── README.md                       # README file
-├── .github                         # GitHub folder
-├── .husky                          # Husky configuration
-├── .storybook                      # Storybook folder
-├── .vscode                         # VSCode configuration
-├── migrations                      # Database migrations
-├── public                          # Public assets folder
-├── scripts                         # Scripts folder
-├── src
-│   ├── app                         # Next JS App (App Router)
-│   ├── components                  # React components
-│   ├── libs                        # 3rd party libraries configuration
-│   ├── locales                     # Locales folder (i18n messages)
-│   ├── models                      # Database models
-│   ├── styles                      # Styles folder
-│   ├── templates                   # Templates folder
-│   ├── types                       # Type definitions
-│   ├── utils                       # Utilities folder
-│   └── validations                 # Validation schemas
-├── tests
-│   ├── e2e                         # E2E tests, also includes Monitoring as Code
-│   └── integration                 # Integration tests
-├── tailwind.config.js              # Tailwind CSS configuration
-└── tsconfig.json                   # TypeScript configuration
-```
-
-### Customization:
+_Name of project here_ is a project designed to provide a user-friendly interface for users.
 
 ### Philosophy:
 
@@ -42,6 +10,7 @@ _Name of project here_ is a project designed to provide a user-friendly interfac
 - Minimal code
 - SEO-friendly
 - Production-ready
+- Performance
 
 ### Requirements:
 
@@ -56,10 +25,23 @@ _Name of project here_ is a project designed to provide a user-friendly interfac
 - **Styles**: TailwindCSS and Shacdn
 - **API**: Supabase API
 - **Email Service**: Resend
-- **Analytics**: Google Analytics, Google Search Console
 - **Multi-language (i18n)**: next-intl
 
-## Running the Project Locally:
+### Analytics:
+
+- Google Analytics
+- Vercel Analytics
+- Vercel SpeedInsights
+- Google Search Console
+
+### Environments Variables:
+
+Before starting the project, you can add the following environment variables.
+
+- `RESEND_API_KEY`: Sending mass mailings and user subscriptions with the [Resend](https://resend.com/) service.
+- `NEXT_PUBLIC_GOOGLE_ANALYTICS`: Analysis of users through navigation between different pages.
+
+### Running the Project Locally:
 
 To run this project on your local machine, follow these steps:
 

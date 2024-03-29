@@ -1,3 +1,3 @@
-import { CONFIG_ENVIROMENTS } from './enviroments.config';
+import { CONFIG_ENVIRONMENTS } from './enviroments.config';
 
-export { CONFIG_ENVIROMENTS };
+export { CONFIG_ENVIRONMENTS };
