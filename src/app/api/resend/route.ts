@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { CONFIG_ENVIROMENTS } from '@/config';
+import { CONFIG_ENVIRONMENTS } from '@/config';
 
 interface IResendResponse {
 	message: string;
@@ -9,7 +9,7 @@ interface IResendResponse {
 
 // como cambiar esta parte?
 
-const resend: Resend = new Resend(CONFIG_ENVIROMENTS.RESEND_API_KEY);
+const resend: Resend = new Resend(CONFIG_ENVIRONMENTS.RESEND_API_KEY);
 
 export async function POST(
 	request: NextRequest

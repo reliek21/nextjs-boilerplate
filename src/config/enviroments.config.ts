@@ -1,9 +1,9 @@
-interface IEnviroments {
-	GOOGLE_ANALYTICS: string;
+interface IEnvironments {
 	RESEND_API_KEY: string;
+	GOOGLE_ANALYTICS: string;
 }
 
-export const CONFIG_ENVIROMENTS: IEnviroments = {
-	GOOGLE_ANALYTICS: (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string) || '',
-	RESEND_API_KEY: (process.env.RESEND_API_KEY as string) || ''
+export const CONFIG_ENVIRONMENTS: IEnvironments = {
+	RESEND_API_KEY: (process.env.RESEND_API_KEY as string) || '',
+	GOOGLE_ANALYTICS: (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string) || ''
 };

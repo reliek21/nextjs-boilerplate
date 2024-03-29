@@ -6,6 +6,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 
 ## [unreleased]
 
+### Added:
+
+- Analytics added | [#24](https://github.com/reliek21/nextjs-boilerplate/pull/24) | [reliek21](https://github.com/reliek21)
+- Principal configuration added | [#2]([link-pr-here](https://github.com/reliek21/nextjs-boilerplate/pull/2)) | [reliek21](https://github.com/reliek21)
+
 ### Deps:
 
 - build(deps-dev): bump typescript from 5.3.3 to 5.4.2 | [#16](https://github.com/reliek21/nextjs-boilerplate/pull/16) | [reliek21](https://github.com/reliek21)
@@ -15,8 +20,5 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 - build(deps-dev): bump @types/react from 18.2.58 to 18.2.64 | [#12](https://github.com/reliek21/nextjs-boilerplate/pull/12) | [reliek21](https://github.com/reliek21)
 - Principal configuration added | [#8](https://github.com/reliek21/nextjs-boilerplate/pull/8) | [reliek21](https://github.com/reliek21)
 
-### Added:
-
-- Principal configuration added | [#2]([link-pr-here](https://github.com/reliek21/nextjs-boilerplate/pull/2)) | [reliek21](https://github.com/reliek21)
 
 - title of feature here | [#1](link-pr-here) | [github-here](https://github.com/github-here)
