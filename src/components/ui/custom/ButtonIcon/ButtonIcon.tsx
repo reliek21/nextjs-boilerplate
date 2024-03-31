@@ -1,11 +1,5 @@
 import { Button } from '@/components/ui/shadcn';
-
-type ButtonIconType = 'github' | 'google' | 'twitter' | 'facebook';
-
-interface IButtonIcon {
-	icon: ButtonIconType;
-	text: string;
-}
+import { IButtonIcon } from './interface/ButtonIcon.interface';
 
 export default function ButtonIcon({ icon, text }: IButtonIcon) {
 	return (

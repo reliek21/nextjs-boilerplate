@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface IFlexContainer {
-	children: React.ReactElement | Array<React.ReactElement>;
-}
+import { IFlexContainer } from './interface/FlexContainer.interface';
 
 export default function FlexContainer({ children }: IFlexContainer) {
 	return (

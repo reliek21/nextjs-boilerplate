@@ -1,11 +1,5 @@
 import Link from 'next/link';
-
-interface ITextLink {
-	text: string;
-	link: string;
-	hasArrow?: boolean | undefined;
-	styles?: string | undefined;
-}
+import { ITextLink } from './interface/TextLink.interface';
 
 export default function TextLink({
 	text,

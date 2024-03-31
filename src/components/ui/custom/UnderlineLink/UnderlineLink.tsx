@@ -1,10 +1,5 @@
 import Link from 'next/link';
-
-interface IUnderlineLink {
-	text: string;
-	link: string;
-	hasUnderline?: boolean | undefined;
-}
+import { IUnderlineLink } from './interface/UnderlineLink.interface';
 
 export default function UnderlineLink({
 	text,

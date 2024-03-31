@@ -14,7 +14,7 @@ import { AUTH_ROUTES } from '@/routes';
 
 export default function SignUpSection() {
 	return (
-		<div className='container w-2/3 p-3 max-md:w-full'>
+		<div className='container w-3/4 p-3 max-md:w-full'>
 			<LoginTitle title='Get Started with Project' />
 			<LoginDescription
 				description='Already have an account?'

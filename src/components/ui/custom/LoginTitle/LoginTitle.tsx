@@ -1,6 +1,4 @@
-interface ILoginTitle {
-	title: string;
-}
+import { ILoginTitle } from './interface/LoginTitle.interface';
 
 export default function LoginTitle({ title }: ILoginTitle) {
 	return (

@@ -6,6 +6,7 @@ import MarginContainer from './MarginContainer/MarginContainer';
 import SeparatorText from './SeparatorText/SeparatorText';
 import TextLink from './TextLink/TextLink';
 import UnderlineLink from './UnderlineLink/UnderlineLink';
+import ValidatedText from './ValidatedText/ValidatedText';
 
 export {
 	ButtonIcon,
@@ -15,5 +16,6 @@ export {
 	SeparatorText,
 	TextLink,
 	UnderlineLink,
-	ButtonCustom
+	ButtonCustom,
+	ValidatedText
 };
