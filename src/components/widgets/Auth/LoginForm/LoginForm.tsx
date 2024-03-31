@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/shadcn';
+import { ButtonCustom } from '@/components/ui/custom';
 import { InputLabel } from '@/components/widgets';
 
 export default function LoginForm() {
@@ -16,17 +16,12 @@ export default function LoginForm() {
 				inputType='password'
 				label='Enter your password'
 				placeholder='**********'
+				hasForgotPassword={true}
 				styles='mt-3'
 			/>
 
 			<div className='grid w-full max-w-sm items-center gap-1.5'>
-				<Button
-					role='button'
-					aria-label='Continue button of login form'
-					type='submit'
-					className='mt-3'>
-					Continue
-				</Button>
+				<ButtonCustom text='Continue' styles='mt-3' />
 			</div>
 		</form>
 	);

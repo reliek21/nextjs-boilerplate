@@ -1,5 +1,15 @@
-import { LoginTitle, LoginDescription } from '@/components/ui/custom';
-import { LegalLoginText, SignUpForm, SupportLogin } from '@/components/widgets';
+import {
+	ButtonIcon,
+	LoginDescription,
+	LoginTitle,
+	SeparatorText
+} from '@/components/ui/custom';
+import {
+	LegalLoginText,
+	SignUpForm,
+	SupportLogin,
+	FlexContainer
+} from '@/components/widgets';
 import { AUTH_ROUTES } from '@/routes';
 
 export default function SignUpSection() {
@@ -11,7 +21,16 @@ export default function SignUpSection() {
 				buttonText='Sign in'
 				buttonUrl={AUTH_ROUTES.login}
 			/>
+
+			<FlexContainer>
+				<ButtonIcon icon='github' text='Github' />
+				<ButtonIcon icon='google' text='Google' />
+			</FlexContainer>
+
+			<SeparatorText text='OR CONTINUE WITH' />
+
 			<SignUpForm />
+
 			<LegalLoginText />
 			<SupportLogin />
 		</div>
