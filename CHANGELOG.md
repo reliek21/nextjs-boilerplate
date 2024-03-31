@@ -8,6 +8,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 
 ### Added:
 
+- Login & Sign Up page added| [#25](https://github.com/reliek21/nextjs-boilerplate/pull/25) | [reliek21](https://github.com/reliek21)
 - Analytics added | [#24](https://github.com/reliek21/nextjs-boilerplate/pull/24) | [reliek21](https://github.com/reliek21)
 - Principal configuration added | [#2]([link-pr-here](https://github.com/reliek21/nextjs-boilerplate/pull/2)) | [reliek21](https://github.com/reliek21)
 
