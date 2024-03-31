@@ -11,4 +11,5 @@ export interface IInputLabel {
 	inputType?: InputLabelType | undefined;
 	hasForgotPassword?: boolean | undefined;
 	styles?: string | undefined;
+	required?: boolean | undefined;
 }

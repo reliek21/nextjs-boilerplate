@@ -39,6 +39,7 @@ export default function SignUpForm() {
 				placeholder='John Doe'
 				value={name}
 				onChange={handleChangeInput(setName)}
+				required
 			/>
 
 			<InputLabel
@@ -48,6 +49,7 @@ export default function SignUpForm() {
 				placeholder='name@email.com'
 				value={email}
 				onChange={handleChangeInput(setEmail)}
+				required
 				styles='mt-3'
 			/>
 
@@ -58,6 +60,7 @@ export default function SignUpForm() {
 				placeholder='**********'
 				value={password}
 				onChange={handleChangeInput(setPassword)}
+				required
 				styles='mt-3'
 			/>
 
@@ -68,6 +71,7 @@ export default function SignUpForm() {
 				placeholder='**********'
 				value={passwordConfirm}
 				onChange={handleChangeInput(setPasswordConfirm)}
+				required
 				styles='mt-3'
 			/>
 
@@ -96,7 +100,9 @@ export default function SignUpForm() {
 				<ButtonCustom
 					text='Continue'
 					styles='mt-3'
-					disabled={isSubmitted || isFormIncomplete || !confirmPassword}
+					disabled={
+						isSubmitted || isFormIncomplete || !isValidEmail || !confirmPassword
+					}
 				/>
 			</div>
 		</form>

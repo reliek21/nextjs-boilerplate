@@ -15,6 +15,7 @@ export default function InputLabel({
 	onChange,
 	inputType = 'text',
 	hasForgotPassword = false,
+	required = false,
 	styles
 }: IInputLabel) {
 	const {
@@ -37,6 +38,7 @@ export default function InputLabel({
 					aria-label={`Input of ${label}`}
 					type={inputType === 'password' && !showPassword ? 'password' : 'text'}
 					placeholder={placeholder}
+					required={required}
 				/>
 
 				{inputType === 'password' ? (
