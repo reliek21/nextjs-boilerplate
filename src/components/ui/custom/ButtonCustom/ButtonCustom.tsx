@@ -1,10 +1,5 @@
 import { Button } from '@/components/ui/shadcn';
-
-interface IButtonCustom {
-	text: string;
-	disabled?: boolean;
-	styles?: string;
-}
+import { IButtonCustom } from './interface/ButtonCustom.interface';
 
 export default function ButtonCustom({
 	text,
@@ -15,7 +10,7 @@ export default function ButtonCustom({
 		<Button
 			role='button'
 			aria-label={`button for ${text}`}
-			type='submit'
+			type='button'
 			className={styles}
 			disabled={disabled}>
 			{text}

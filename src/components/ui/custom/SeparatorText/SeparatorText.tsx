@@ -1,9 +1,5 @@
 import { Separator } from '@/components/ui/shadcn';
-
-interface ISeparatorText {
-	text: string;
-	className?: string | undefined;
-}
+import { ISeparatorText } from './interface/SeparatorText.interface';
 
 export default function SeparatorText({ text, className }: ISeparatorText) {
 	return (

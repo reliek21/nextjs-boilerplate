@@ -1,7 +1,4 @@
-interface IEnvironments {
-	RESEND_API_KEY: string;
-	GOOGLE_ANALYTICS: string;
-}
+import { IEnvironments } from '@/interface/enviroments';
 
 export const CONFIG_ENVIRONMENTS: IEnvironments = {
 	RESEND_API_KEY: (process.env.RESEND_API_KEY as string) || '',

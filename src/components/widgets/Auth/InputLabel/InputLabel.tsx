@@ -1,31 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Input, Label } from '@/components/ui/shadcn';
 import { TextLink } from '@/components/ui/custom';
 
-type InputLabelType = 'text' | 'email' | 'password';
-
-interface IInputLabel {
-	id: string;
-	label: string;
-	placeholder?: string | undefined;
-	inputType?: InputLabelType | undefined;
-	hasForgotPassword?: boolean | undefined;
-	styles?: string | undefined;
-}
+import { useShowPassword } from './hooks/useShowPassword';
+import { IInputLabel } from './interface/InputLabel.interface';
 
 export default function InputLabel({
 	id,
 	label,
 	placeholder,
+	value,
+	onChange,
 	inputType = 'text',
 	hasForgotPassword = false,
 	styles
 }: IInputLabel) {
-	const [showPassword, setShowPassword] = useState<boolean>(false);
-
-	const handleClick = (): void => setShowPassword(!showPassword);
+	const {
+		showPassword,
+		handleClick
+	}: { handleClick: () => void; showPassword: boolean } = useShowPassword();
 
 	return (
 		<div className={`grid w-full max-w-sm items-center gap-1.5 ${styles}`}>
@@ -37,6 +32,8 @@ export default function InputLabel({
 				<Input
 					id={id}
 					role='textbox'
+					value={value}
+					onChange={onChange}
 					aria-label={`Input of ${label}`}
 					type={inputType === 'password' && !showPassword ? 'password' : 'text'}
 					placeholder={placeholder}

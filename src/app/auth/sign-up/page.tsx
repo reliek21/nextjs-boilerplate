@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function SignUpPage() {
 	return (
-		<main className='h-svh flex items-center justify-center flex-col bg-gradient-to-br from-orange-100'>
+		<main className='min-h-screen flex items-center justify-center flex-col bg-gradient-to-br from-orange-100'>
 			<MarginContainer>
 				<SignUpSection />
 			</MarginContainer>

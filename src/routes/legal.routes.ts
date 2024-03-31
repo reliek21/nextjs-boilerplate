@@ -1,9 +1,6 @@
-interface IRoutes {
-	term: string;
-	privacy: string;
-}
+import { ILegalRoute } from '@/interface/routes';
 
-export const LEGAL_ROUTES: IRoutes = {
+export const LEGAL_ROUTES: ILegalRoute = {
 	term: '/terms-and-conditions',
 	privacy: '/privacy-policy'
 };

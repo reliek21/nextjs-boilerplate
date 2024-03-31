@@ -1,10 +1,5 @@
 import { TextLink } from '@/components/ui/custom';
-
-interface ILoginDescription {
-	description: string;
-	buttonText: string;
-	buttonUrl: string;
-}
+import { ILoginDescription } from './interface/LoginDescription.interface';
 
 export default function LoginDescription({
 	description,
