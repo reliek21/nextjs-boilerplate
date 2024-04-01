@@ -22,7 +22,7 @@ _Name of project here_ is a project designed to provide a user-friendly interfac
 - **Type-safe ORM**: DrizzleORM
 - **Authentication**: NextAuth.js with Supabase
 - **Database**: Supabase Database
-- **Styles**: TailwindCSS and Shacdn
+- **Styles**: CSS, SASS, TailwindCSS and Shacdn
 - **API**: Supabase API
 - **Email Service**: Resend
 - **Multi-language (i18n)**: next-intl
