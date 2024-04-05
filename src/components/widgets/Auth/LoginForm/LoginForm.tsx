@@ -18,11 +18,7 @@ export default function LoginForm() {
 	} = useValidateFormLogin();
 
 	return (
-		<form
-			action='#'
-			onSubmit={handleSubmit}
-			method='POST'
-			className='mt-10 mb-5'>
+		<form onSubmit={handleSubmit} method='POST' className='mt-10 mb-5'>
 			<InputLabel
 				id='email'
 				inputType='email'
@@ -48,6 +44,7 @@ export default function LoginForm() {
 			<div className='grid w-full max-w-sm items-center gap-1.5'>
 				<ButtonCustom
 					text='Continue'
+					buttonType='submit'
 					styles='mt-3'
 					disabled={isSubmitted || isFormIncomplete}
 				/>
