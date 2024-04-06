@@ -1,41 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server';
+
 import prisma from '@/config/db.config';
-import bcrypt from 'bcrypt';
+import { BcryptHelper } from '@/helpers';
+import { IUser } from '@/interface/auth';
 
 export async function POST(request: NextRequest) {
+	const bcryptHelper: BcryptHelper = new BcryptHelper();
+
 	try {
-		const data = await request.json();
+		const data: IUser = await request.json();
 
-		const emailFound = await prisma.user.findUnique({
+		const { name, username, email, password } = data;
+
+		const emailFound: IUser | null = await prisma.user.findUnique({
 			where: {
-				email: data.email
+				email
 			}
 		});
 
-		const userFound = await prisma.user.findUnique({
-			where: {
-				email: data.email
-			}
-		});
-
-		if (userFound && emailFound) {
-			return NextResponse.json(
-				{
-					message: 'User already exists!'
-				},
-				{
-					status: 400
-				}
-			);
+		if (emailFound) {
+			return NextResponse.json({
+				ok: false,
+				status: 400,
+				message: 'User already exists!'
+			});
 		}
 
-		const lowerCaseEmail = data.email.toLowerCase();
-		const hashedPassword = await bcrypt.hash(data.password, 10);
+		const lowerCaseEmail: string = data.email.toLowerCase();
+		const hashedPassword: string = await bcryptHelper.hashPassword(
+			password as string
+		);
 
-		const newUser = await prisma.user.create({
+		const newUser: IUser = await prisma.user.create({
 			data: {
-				name: data.name,
-				username: data.username,
+				name: name,
+				username: username,
 				email: lowerCaseEmail,
 				password: hashedPassword
 			}
@@ -44,14 +43,8 @@ export async function POST(request: NextRequest) {
 		const { password: _, ...user } = newUser;
 
 		return NextResponse.json(user);
-	} catch (error: unknown) {
-		return NextResponse.json(
-			{
-				message: error
-			},
-			{
-				status: 500
-			}
-		);
+	} catch (error: any | unknown) {
+		console.log(`Error during creating user: ${error.message}`);
+		throw new Error('Failed to assign user. Please try again.');
 	}
 }

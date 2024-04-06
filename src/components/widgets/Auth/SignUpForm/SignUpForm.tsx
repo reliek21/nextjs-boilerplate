@@ -4,7 +4,7 @@ import { ButtonCustom, ValidatedText } from '@/components/ui/custom';
 import { InputLabel } from '@/components/widgets';
 
 import { useValidateForm } from './hooks/useValidateForm';
-import { handleChangeInput } from '@/helpers';
+import { handleChangeInputHelper } from '@/helpers';
 
 export default function SignUpForm() {
 	const {
@@ -33,7 +33,7 @@ export default function SignUpForm() {
 				id='name'
 				label='Full Name'
 				value={name}
-				onChange={handleChangeInput(setName)}
+				onChange={handleChangeInputHelper(setName)}
 				placeholder='John Doe'
 				required
 			/>
@@ -42,7 +42,7 @@ export default function SignUpForm() {
 				id='username'
 				label='Username'
 				value={username}
-				onChange={handleChangeInput(setUsername)}
+				onChange={handleChangeInputHelper(setUsername)}
 				placeholder='Doe'
 				required
 				styles='mt-3'
@@ -54,7 +54,7 @@ export default function SignUpForm() {
 				label='Enter your email'
 				placeholder='name@email.com'
 				value={email}
-				onChange={handleChangeInput(setEmail)}
+				onChange={handleChangeInputHelper(setEmail)}
 				required
 				styles='mt-3'
 			/>
@@ -65,7 +65,7 @@ export default function SignUpForm() {
 				label='Enter your password'
 				placeholder='**********'
 				value={password}
-				onChange={handleChangeInput(setPassword)}
+				onChange={handleChangeInputHelper(setPassword)}
 				required
 				styles='mt-3'
 			/>
@@ -76,7 +76,7 @@ export default function SignUpForm() {
 				label='Repeat your password'
 				placeholder='**********'
 				value={passwordConfirm}
-				onChange={handleChangeInput(setPasswordConfirm)}
+				onChange={handleChangeInputHelper(setPasswordConfirm)}
 				required
 				styles='mt-3'
 			/>

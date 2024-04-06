@@ -3,7 +3,7 @@
 import { ButtonCustom } from '@/components/ui/custom';
 import { InputLabel } from '@/components/widgets';
 
-import { handleChangeInput } from '@/helpers';
+import { handleChangeInputHelper } from '@/helpers';
 import { useValidateFormLogin } from './hooks/useValidateForm';
 
 export default function LoginForm() {
@@ -25,7 +25,7 @@ export default function LoginForm() {
 				label='Enter your email'
 				placeholder='name@email.com'
 				value={email}
-				onChange={handleChangeInput(setEmail)}
+				onChange={handleChangeInputHelper(setEmail)}
 				required
 			/>
 
@@ -36,7 +36,7 @@ export default function LoginForm() {
 				placeholder='**********'
 				hasForgotPassword={true}
 				value={password}
-				onChange={handleChangeInput(setPassword)}
+				onChange={handleChangeInputHelper(setPassword)}
 				required
 				styles='mt-3'
 			/>

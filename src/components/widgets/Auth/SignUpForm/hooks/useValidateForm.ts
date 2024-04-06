@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FormDataValidator } from '@/helpers';
+
 import { useRouter } from 'next/navigation';
+import { FormDataValidatorHelper } from '@/helpers';
 
 export function useValidateForm(): any {
 	const router = useRouter();
@@ -12,7 +13,8 @@ export function useValidateForm(): any {
 
 	const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
-	const formDataValidator: FormDataValidator = new FormDataValidator();
+	const formDataValidator: FormDataValidatorHelper =
+		new FormDataValidatorHelper();
 
 	const isValidEmail: boolean = formDataValidator.validateEmail(email);
 	const passwordLength: boolean = formDataValidator.validatePasswordLength(
@@ -23,7 +25,8 @@ export function useValidateForm(): any {
 		password,
 		passwordConfirm
 	);
-	const specialChars: boolean = formDataValidator.hasSpecialChars(password);
+	const specialChars: boolean =
+		formDataValidator.hasSpecialCharacters(password);
 	const passwordHasNumbers: boolean = formDataValidator.hasNumbers(password);
 	const hasUpperAndLowerLetters: boolean =
 		formDataValidator.hasUpperAndLowerCaseLetters(password);

@@ -1,2 +1,3 @@
-export * from './form-data-validator';
-export * from './handle-change-input';
+export * from './form-data-validator.helper';
+export * from './handle-change-input.helper';
+export * from './bcrypt.helper';

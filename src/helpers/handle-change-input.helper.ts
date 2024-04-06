@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function handleChangeInput(
+export function handleChangeInputHelper(
 	setState: React.Dispatch<React.SetStateAction<string>>
 ) {
 	return (e: React.ChangeEvent<HTMLInputElement>): void => {
