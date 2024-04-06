@@ -1,11 +1,18 @@
+import { googleProviderConfig } from './providers/google.provider';
+import { credentialsProviderConfig } from './providers/credentials.provider';
+import { githubProviderConfig } from './providers/github.provider';
+
 import { AUTH_ROUTES } from '@/routes';
 import { CONFIG_ENVIRONMENTS } from '../enviroments.config';
-import { credentialsProviderConfig } from './providers/credentials.provider';
 
 // Configuration options for NextAuth
 export const authOptions = {
 	secret: CONFIG_ENVIRONMENTS.NEXT_AUTH_SECRET,
-	providers: [credentialsProviderConfig],
+	providers: [
+		credentialsProviderConfig,
+		googleProviderConfig,
+		githubProviderConfig
+	],
 	pages: {
 		signIn: AUTH_ROUTES.login,
 		signOut: '/auth/signout',

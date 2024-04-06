@@ -1,3 +1,6 @@
+'use client';
+
+import { signIn } from 'next-auth/react';
 import {
 	LoginTitle,
 	LoginDescription,
@@ -10,7 +13,7 @@ import {
 	LoginForm,
 	SupportLogin
 } from '@/components/widgets';
-import { AUTH_ROUTES } from '@/routes';
+import { AUTH_ROUTES, MAIN_ROUTES } from '@/routes';
 
 export default function LoginSection() {
 	return (
@@ -23,8 +26,27 @@ export default function LoginSection() {
 			/>
 
 			<FlexContainer>
-				<ButtonIcon icon='github' text='Github' />
-				<ButtonIcon icon='google' text='Google' />
+				<ButtonIcon
+					icon='github'
+					text='Github'
+					onClick={async () =>
+						await signIn('github', {
+							redirect: false,
+							callbackUrl: '/dashboard'
+						})
+					}
+				/>
+				<ButtonIcon
+					icon='google'
+					text='Google'
+					onClick={async (): Promise<void> => {
+						const result = await signIn('google', {
+							redirect: false,
+							callbackUrl: '/dashboard'
+						});
+						console.log(result);
+					}}
+				/>
 			</FlexContainer>
 
 			<SeparatorText text='OR CONTINUE WITH' />
