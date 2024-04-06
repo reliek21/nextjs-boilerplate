@@ -1,7 +1,7 @@
 import { Prisma, PrismaClient } from '@prisma/client';
 import { DefaultArgs } from '@prisma/client/runtime/binary';
 
-import { CONFIG_ENVIRONMENTS } from '@/config';
+import { CONFIG_ENVIRONMENTS } from './enviroments.config';
 
 function prismaClientSingleton(): PrismaClient<
 	Prisma.PrismaClientOptions,
