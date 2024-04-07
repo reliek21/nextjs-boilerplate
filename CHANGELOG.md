@@ -7,11 +7,22 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) this pr
 ## [unreleased]
 
 ### Added:
-
+- GitHub provider added | [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
+- Google provider added | [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
+- Credentials added | [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
 - Validate form functions | [#26](https://github.com/reliek21/nextjs-boilerplate/pull/26) | [reliek21](https://github.com/reliek21)
 - Login & Sign Up page added | [#25](https://github.com/reliek21/nextjs-boilerplate/pull/25) | [reliek21](https://github.com/reliek21)
 - Analytics added | [#24](https://github.com/reliek21/nextjs-boilerplate/pull/24) | [reliek21](https://github.com/reliek21)
 - Principal configuration added | [#2]([link-pr-here](https://github.com/reliek21/nextjs-boilerplate/pull/2)) | [reliek21](https://github.com/reliek21)
+
+### Refactor:
+
+- Project folder refactored | [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
+- Refactor of the files| [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
+
+### Fix:
+
+- Environments exports fixed | [#52](https://github.com/reliek21/nextjs-boilerplate/pull/52) | [reliek21](https://github.com/reliek21)
 
 ### Deps:
 

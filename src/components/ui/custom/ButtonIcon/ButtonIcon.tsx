@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/shadcn';
-import { IButtonIcon } from './interface/ButtonIcon.interface';
+import { IButtonIcon } from './interface/ButtonIcon';
 
 export default function ButtonIcon({ icon, text, onClick }: IButtonIcon) {
 	return (

@@ -1,7 +1,9 @@
 'use client';
+
+import React from 'react';
 import { signOut, useSession } from 'next-auth/react';
 
-export default function DashboardPage() {
+export default function DashboardPage(): React.ReactElement {
 	const { data: session, status, update } = useSession();
 
 	if (status === 'loading') return <div>Loading...</div>;
@@ -13,7 +15,7 @@ export default function DashboardPage() {
 	return (
 		<div>
 			<h1>Bienvenido de nuevo, {getName}</h1>
-			<img src={session?.user?.image} />
+			{/*<Image src={session?.user?.image} alt={} />*/}
 			<p>This is your email account: {session?.user?.email}</p>
 			<button
 				className='bg-red-500 p-2 border-zinc-900 rounded-full text-white'

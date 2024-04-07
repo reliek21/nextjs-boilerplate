@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 
 import { IUser } from '@/interface/auth';
-import prisma from '@/config/db.config';
-
 import { BcryptHelper } from '@/helpers';
+
+import prisma from '@/database/database.config';
 
 export async function authorizeConfig(
 	credentials: Record<string, string> | undefined

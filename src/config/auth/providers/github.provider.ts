@@ -1,7 +1,13 @@
 import { OAuthConfig } from 'next-auth/providers/oauth';
 import GitHubProvider, { GithubProfile } from 'next-auth/providers/github';
 
+import { CONFIG_ENVIRONMENTS } from '@/config';
+
+/**
+ * Configuration of the credential
+ * provider for authentication with GitHub
+ * */
 export const githubProviderConfig: OAuthConfig<GithubProfile> = GitHubProvider({
-	clientId: process.env.GITHUB_ID as string,
-	clientSecret: process.env.GITHUB_SECRET as string
+	clientId: CONFIG_ENVIRONMENTS.GITHUB_ID,
+	clientSecret: CONFIG_ENVIRONMENTS.GITHUB_ID
 });

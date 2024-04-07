@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import prisma from '@/config/db.config';
 import { BcryptHelper } from '@/helpers';
+import prisma from '@/database/database.config';
 import { IUser } from '@/interface/auth';
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest): Promise<Response> {
 	const bcryptHelper: BcryptHelper = new BcryptHelper();
 
 	try {
 		const data: IUser = await request.json();
 
-		const { name, username, email, password } = data;
+		const { name, username, email, password }: IUser = data;
 
 		const emailFound: IUser | null = await prisma.user.findUnique({
 			where: {
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 			password as string
 		);
 
-		const newUser: IUser = await prisma.user.create({
+		await prisma.user.create({
 			data: {
 				name: name,
 				username: username,
@@ -40,9 +40,11 @@ export async function POST(request: NextRequest) {
 			}
 		});
 
-		const { password: _, ...user } = newUser;
-
-		return NextResponse.json(user);
+		return NextResponse.json({
+			ok: true,
+			status: 201,
+			message: 'User created successfully!'
+		});
 	} catch (error: any | unknown) {
 		console.log(`Error during creating user: ${error.message}`);
 		throw new Error('Failed to assign user. Please try again.');

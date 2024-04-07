@@ -1,6 +1,10 @@
-import { IAuthRoute } from '@/interface/routes';
+import { IAuthRoutes } from '@/interface/routes';
 
-export const AUTH_ROUTES: IAuthRoute = {
-	login: '/auth/login',
-	signUp: '/auth/sign-up'
+export const AUTH_ROUTES: IAuthRoutes = {
+	signIn: '/auth/login',
+	signUp: '/auth/sign-up',
+	signOut: '/auth/sign-out',
+	error: '/auth/error',
+	newUser: '/auth/new-user',
+	verifyRequest: '/auth/verify-request'
 };

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-
 import { useRouter } from 'next/navigation';
+
+import { AUTH_ROUTES } from '@/routes';
 import { FormDataValidatorHelper } from '@/helpers';
 
 export function useValidateForm(): any {
-	const router = useRouter();
+	const router: any = useRouter();
+
 	const [name, setName] = useState<string>('');
 	const [username, setUsername] = useState<string>('');
 	const [email, setEmail] = useState<string>('');
@@ -51,7 +53,7 @@ export function useValidateForm(): any {
 		e.preventDefault();
 
 		try {
-			const result: Response = await fetch('/api/auth/register', {
+			const response: Response = await fetch('/api/auth/register', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -66,10 +68,10 @@ export function useValidateForm(): any {
 
 			console.log({
 				status: 'success',
-				result: result.json()
+				result: response.json()
 			});
 
-			if (result.ok) {
+			if (response.ok) {
 				setTimeout(() => setIsSubmitted(true), 1500);
 
 				setName('');
@@ -77,7 +79,7 @@ export function useValidateForm(): any {
 				setEmail('');
 				setPassword('');
 				setPasswordConfirm('');
-				router.push('/login');
+				router.push(AUTH_ROUTES.signIn);
 			} else {
 				setIsSubmitted(false);
 				console.log('Error creating user');

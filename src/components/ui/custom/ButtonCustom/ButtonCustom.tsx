@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/shadcn';
-import { IButtonCustom } from './interface/ButtonCustom.interface';
+import { IButtonCustom } from './interface/ButtonCustom';
 
 export default function ButtonCustom({
 	text,

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { signIn, SignInResponse } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { signIn, SignInResponse } from 'next-auth/react';
 
-export function useValidateFormLogin(): any {
-	const router = useRouter();
+import { PRIVATE_ROUTES } from '@/routes';
+
+export function useValidateFormLogin() {
+	const router: any = useRouter();
 
 	const [email, setEmail] = useState<string>('');
 	const [password, setPassword] = useState<string>('');
@@ -13,22 +15,22 @@ export function useValidateFormLogin(): any {
 
 	const handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void = async (
 		e: React.FormEvent<HTMLFormElement>
-	) => {
+	): Promise<void> => {
 		e.preventDefault();
 
-		const res: SignInResponse | undefined = await signIn('credentials', {
+		const response: SignInResponse | undefined = await signIn('credentials', {
+			redirect: false,
 			email: email,
-			password: password,
-			redirect: false
+			password: password
 		});
 
-		if (res?.error) {
-			alert(res.error);
+		if (response?.error) {
+			alert(response.error);
 		} else {
-			router.push('/dashboard');
+			router.push(PRIVATE_ROUTES.dashboard);
 		}
 
-		console.log(res);
+		console.log(response);
 	};
 
 	return {

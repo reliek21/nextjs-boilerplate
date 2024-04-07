@@ -1,6 +1,7 @@
 'use client';
 
 import { signIn } from 'next-auth/react';
+
 import {
 	LoginTitle,
 	LoginDescription,
@@ -13,7 +14,8 @@ import {
 	LoginForm,
 	SupportLogin
 } from '@/components/widgets';
-import { AUTH_ROUTES, MAIN_ROUTES } from '@/routes';
+
+import { AUTH_ROUTES, PRIVATE_ROUTES } from '@/routes';
 
 export default function LoginSection() {
 	return (
@@ -32,7 +34,7 @@ export default function LoginSection() {
 					onClick={async () =>
 						await signIn('github', {
 							redirect: false,
-							callbackUrl: '/dashboard'
+							callbackUrl: PRIVATE_ROUTES.dashboard
 						})
 					}
 				/>
@@ -42,7 +44,7 @@ export default function LoginSection() {
 					onClick={async (): Promise<void> => {
 						const result = await signIn('google', {
 							redirect: false,
-							callbackUrl: '/dashboard'
+							callbackUrl: PRIVATE_ROUTES.dashboard
 						});
 						console.log(result);
 					}}

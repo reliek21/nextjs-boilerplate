@@ -28,7 +28,7 @@
 		"clean": "rm -rf node_modules/ .next/"
 	},
 	"prisma": {
-		"schema": "src/prisma/schema.prisma"
+		"schema": "src/database/prisma/schema.prisma"
 	},
 	"dependencies": {
 		"@next/third-parties": "^14.1.4",

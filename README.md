@@ -50,7 +50,7 @@ Before starting the project, you can add the following environment variables.
 - `GOOGLE_CLIENT_ID`: Authentication with Google, more information: https://next-auth.js.org/providers/google
 - `GOOGLE_CLIENT_SECRET`: Authentication with Google, more information: https://next-auth.js.org/providers/google
 - `GITHUB_ID`: Authentication with GitHub, more information: https://next-auth.js.org/providers/github
-- `GITHUB_SECRET`:  Authentication with GitHub, more information: https://next-auth.js.org/providers/github
+- `GITHUB_SECRET`: Authentication with GitHub, more information: https://next-auth.js.org/providers/github
 - `DATABASE_URL`: URL of the database in **PostgresSQL** of any provider, in this case [**Supabase**](https://supabase.com/).
 
 ### Running the Project Locally:

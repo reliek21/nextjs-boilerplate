@@ -1,4 +1,4 @@
-import { IValidatedText } from './interface/ValidatedText.interface';
+import { IValidatedText } from './interface/ValidatedText';
 
 export default function ValidatedText({
 	text,

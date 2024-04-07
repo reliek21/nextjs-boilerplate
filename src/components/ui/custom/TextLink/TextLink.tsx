@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ITextLink } from './interface/TextLink.interface';
+import { ITextLink } from './interface/TextLink';
 
 export default function TextLink({
 	text,
