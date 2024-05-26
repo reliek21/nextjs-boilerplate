@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFlexContainer } from './interface/FlexContainer.interface';
+import { IFlexContainer } from './interface/FlexContainer';
 
 export default function FlexContainer({ children }: IFlexContainer) {
 	return (

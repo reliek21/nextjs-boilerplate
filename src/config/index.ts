@@ -1,3 +1,4 @@
-import { CONFIG_ENVIRONMENTS } from './enviroments.config';
+export * from './enviroments.config'; // first export always
 
-export { CONFIG_ENVIRONMENTS };
+export * from './auth/auth.config';
+export * from './auth/functions/authorize-function.config';

@@ -10,6 +10,7 @@ import {
 	SupportLogin,
 	FlexContainer
 } from '@/components/widgets';
+
 import { AUTH_ROUTES } from '@/routes';
 
 export default function SignUpSection() {
@@ -19,7 +20,7 @@ export default function SignUpSection() {
 			<LoginDescription
 				description='Already have an account?'
 				buttonText='Sign in'
-				buttonUrl={AUTH_ROUTES.login}
+				buttonUrl={AUTH_ROUTES.signIn}
 			/>
 
 			<FlexContainer>

@@ -5,7 +5,7 @@ import { Button, Input, Label } from '@/components/ui/shadcn';
 import { TextLink } from '@/components/ui/custom';
 
 import { useShowPassword } from './hooks/useShowPassword';
-import { IInputLabel } from './interface/InputLabel.interface';
+import { IInputLabel } from './interface/InputLabel';
 
 export default function InputLabel({
 	id,

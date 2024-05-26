@@ -1,27 +1,36 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { signIn, SignInResponse } from 'next-auth/react';
 
-export function useValidateFormLogin(): any {
-	const [email, setEmail]: [
-		string,
-		(value: ((prevState: string) => string) | string) => void
-	] = useState('');
+import { PRIVATE_ROUTES } from '@/routes';
 
-	const [password, setPassword]: [
-		string,
-		(value: ((prevState: string) => string) | string) => void
-	] = useState('');
+export function useValidateFormLogin() {
+	const router: any = useRouter();
 
-	const [isSubmitted, setIsSubmitted]: [
-		boolean,
-		(value: ((prevState: boolean) => boolean) | boolean) => void
-	] = useState<boolean>(false);
+	const [email, setEmail] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
+	const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
 	const isFormIncomplete: boolean = !email || !password;
 
-	const handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void = (
+	const handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void = async (
 		e: React.FormEvent<HTMLFormElement>
-	): void => {
+	): Promise<void> => {
 		e.preventDefault();
+
+		const response: SignInResponse | undefined = await signIn('credentials', {
+			redirect: false,
+			email: email,
+			password: password
+		});
+
+		if (response?.error) {
+			alert(response.error);
+		} else {
+			router.push(PRIVATE_ROUTES.dashboard);
+		}
+
+		console.log(response);
 	};
 
 	return {

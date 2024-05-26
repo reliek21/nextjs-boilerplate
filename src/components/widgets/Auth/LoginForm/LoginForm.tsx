@@ -3,7 +3,7 @@
 import { ButtonCustom } from '@/components/ui/custom';
 import { InputLabel } from '@/components/widgets';
 
-import { handleChangeInput } from '@/helpers';
+import { handleChangeInputHelper } from '@/helpers';
 import { useValidateFormLogin } from './hooks/useValidateForm';
 
 export default function LoginForm() {
@@ -18,18 +18,14 @@ export default function LoginForm() {
 	} = useValidateFormLogin();
 
 	return (
-		<form
-			action='#'
-			onSubmit={handleSubmit}
-			method='POST'
-			className='mt-10 mb-5'>
+		<form onSubmit={handleSubmit} method='POST' className='mt-10 mb-5'>
 			<InputLabel
 				id='email'
 				inputType='email'
 				label='Enter your email'
 				placeholder='name@email.com'
 				value={email}
-				onChange={handleChangeInput(setEmail)}
+				onChange={handleChangeInputHelper(setEmail)}
 				required
 			/>
 
@@ -40,7 +36,7 @@ export default function LoginForm() {
 				placeholder='**********'
 				hasForgotPassword={true}
 				value={password}
-				onChange={handleChangeInput(setPassword)}
+				onChange={handleChangeInputHelper(setPassword)}
 				required
 				styles='mt-3'
 			/>
@@ -48,6 +44,7 @@ export default function LoginForm() {
 			<div className='grid w-full max-w-sm items-center gap-1.5'>
 				<ButtonCustom
 					text='Continue'
+					buttonType='submit'
 					styles='mt-3'
 					disabled={isSubmitted || isFormIncomplete}
 				/>

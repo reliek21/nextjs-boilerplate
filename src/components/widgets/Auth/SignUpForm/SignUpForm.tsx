@@ -4,42 +4,48 @@ import { ButtonCustom, ValidatedText } from '@/components/ui/custom';
 import { InputLabel } from '@/components/widgets';
 
 import { useValidateForm } from './hooks/useValidateForm';
-import { handleChangeInput } from '@/helpers';
+import { handleChangeInputHelper } from '@/helpers';
 
 export default function SignUpForm() {
 	const {
-		handleSubmit,
 		name,
 		setName,
+		username,
+		setUsername,
 		email,
 		setEmail,
 		password,
 		setPassword,
 		passwordConfirm,
 		setPasswordConfirm,
-		isValidEmail,
-		hasUpperAndLowerLetters,
-		passwordLength,
-		passwordHasNumbers,
+		handleSubmit,
 		specialChars,
+		isValidEmail,
+		passwordLength,
 		confirmPassword,
-		isSubmitted,
-		isFormIncomplete
-	} = useValidateForm();
+		passwordHasNumbers,
+		hasUpperAndLowerLetters
+	}: any = useValidateForm();
 
 	return (
-		<form
-			action='#'
-			onSubmit={handleSubmit}
-			method='POST'
-			className='mt-10 mb-5'>
+		<form method='POST' onSubmit={handleSubmit} className='mt-10 mb-5'>
 			<InputLabel
 				id='name'
 				label='Full Name'
-				placeholder='John Doe'
 				value={name}
-				onChange={handleChangeInput(setName)}
+				onChange={handleChangeInputHelper(setName)}
+				placeholder='John Doe'
 				required
+			/>
+
+			<InputLabel
+				id='username'
+				label='Username'
+				value={username}
+				onChange={handleChangeInputHelper(setUsername)}
+				placeholder='Doe'
+				required
+				styles='mt-3'
 			/>
 
 			<InputLabel
@@ -48,7 +54,7 @@ export default function SignUpForm() {
 				label='Enter your email'
 				placeholder='name@email.com'
 				value={email}
-				onChange={handleChangeInput(setEmail)}
+				onChange={handleChangeInputHelper(setEmail)}
 				required
 				styles='mt-3'
 			/>
@@ -59,7 +65,7 @@ export default function SignUpForm() {
 				label='Enter your password'
 				placeholder='**********'
 				value={password}
-				onChange={handleChangeInput(setPassword)}
+				onChange={handleChangeInputHelper(setPassword)}
 				required
 				styles='mt-3'
 			/>
@@ -70,7 +76,7 @@ export default function SignUpForm() {
 				label='Repeat your password'
 				placeholder='**********'
 				value={passwordConfirm}
-				onChange={handleChangeInput(setPasswordConfirm)}
+				onChange={handleChangeInputHelper(setPasswordConfirm)}
 				required
 				styles='mt-3'
 			/>
@@ -98,11 +104,10 @@ export default function SignUpForm() {
 
 			<div className='grid w-full max-w-sm items-center gap-1.5'>
 				<ButtonCustom
+					buttonType='submit'
 					text='Continue'
 					styles='mt-3'
-					disabled={
-						isSubmitted || isFormIncomplete || !isValidEmail || !confirmPassword
-					}
+					disabled={false}
 				/>
 			</div>
 		</form>

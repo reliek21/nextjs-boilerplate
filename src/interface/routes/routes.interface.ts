@@ -3,12 +3,20 @@ export interface IRoutes {
 	support: string;
 }
 
-export interface IAuthRoute {
-	login: string;
+export interface IAuthRoutes {
+	signIn: string;
 	signUp: string;
+	signOut: string;
+	error: string;
+	verifyRequest: string;
+	newUser: string;
 }
 
-export interface ILegalRoute {
+export interface ILegalRoutes {
 	term: string;
 	privacy: string;
+}
+
+export interface IPrivateRoutes {
+	dashboard: string;
 }

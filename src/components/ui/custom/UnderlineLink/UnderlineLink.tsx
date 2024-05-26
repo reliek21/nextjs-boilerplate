@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IUnderlineLink } from './interface/UnderlineLink.interface';
+import { IUnderlineLink } from './interface/UnderlineLink';
 
 export default function UnderlineLink({
 	text,
