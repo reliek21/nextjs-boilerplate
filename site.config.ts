@@ -15,4 +15,6 @@ export const siteConfig = {
 		github: 'https://github.com/shadcn/ui',
 		docs: 'https://ui.shadcn.com'
 	}
+
+	// TODO: all configurations about, providers, seo and more only here
 };
