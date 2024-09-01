@@ -23,7 +23,7 @@ jobs:
     needs: changelog
 
     env:
-      NEXT_PUBLIC_RESEND_EMAIL: ${{ secrets.NEXT_PUBLIC_RESEND_EMAIL }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -33,7 +33,7 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run linting
         run: npm run lint

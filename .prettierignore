@@ -1,0 +1,9 @@
+package.json
+package-lock.json
+public
+CHANGELOG.md
+.yarn
+node_modules
+.next
+build
+.contentlayer

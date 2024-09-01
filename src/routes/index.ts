@@ -1,3 +1,4 @@
-import { MAIN_ROUTES } from './main.routes';
-
-export { MAIN_ROUTES };
+export * from './main.routes';
+export * from './auth.routes';
+export * from './legal.routes';
+export * from './private.routes';

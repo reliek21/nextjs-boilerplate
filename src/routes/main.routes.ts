@@ -1,7 +1,6 @@
-interface IRoutes {
-	home: string;
-}
+import { IRoutes } from '@/interface/routes';
 
 export const MAIN_ROUTES: IRoutes = {
-	home: '/'
+	home: '/',
+	support: '/support'
 };
